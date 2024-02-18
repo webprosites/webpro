@@ -5,7 +5,7 @@ $(function () {
     $('#budget-form').on('submit', function (e) {
 
         if (!e.isDefaultPrevented()) {
-            var url = "budget.php";
+            var url = "../forms/budget.php";
 
             $.ajax({
                 type: "POST",
@@ -13,6 +13,7 @@ $(function () {
                 data: $(this).serialize(),
                 success: function (data)
                 {
+
                     var messageAlert = 'alert-' + data.type;
                     var messageText = data.message;
 
