@@ -4,13 +4,13 @@
  */
 
 // an email address that will be in the From field of the email.
-$from = 'WebPro <contato@webprosites.com.br>';
+$from = 'WebPro | Orçamento <contato@webprosites.com.br>';
 
 // an email address that will receive the email with the output of the form
-$sendTo = 'WebPro <contato@webprosites.com.br>';
+$sendTo = 'WebPro | Orçamento <contato@webprosites.com.br>';
 
 // subject of the email
-$subject = 'Nova mensagem do site';
+$subject = 'Nova orçamento do site';
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
@@ -34,7 +34,7 @@ try
 
     if(count($_POST) == 0) throw new \Exception('Form is empty');
             
-    $emailText = "Nova mensagem do site\n=============================\n";
+    $emailText = "Novo orçamento\n=============================\n";
 
     foreach ($_POST as $key => $value) {
         // If the field exists in the $fields array, include it in the email 
